@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <div class="container-form">
+        <form action="/" method="POST">
+            <label for="" class="name">Nombre</label>
+            <input type="text" placeholder="Pedro" name="name" value=<%= locals.oldData ? oldData.name : null%>>
+            <% if (locals.errors && errors.name) {%>
+                <div class="error"><%= errors.name.msg %></div>
+                <%}%>
+            <label for="">Apellido</label>
+            <input type="text" placeholder="Albarez" name="last_name" value=<%= locals.oldData ? oldData.last_name : null%>>
+            <% if (locals.errors && errors.last_name) {%>
+                <div class="error"><%= errors.last_name.msg %></div>
+                <%}%>
+            <label for="">Email</label>
+            <input type="email" placeholder="xxxxxxxx@gmail.com" name="email" value=<%= locals.oldData ? oldData.email : null%>>
+            <% if (locals.errors && errors.email) {%>
+                <div class="error"><%= errors.email.msg %></div>
+                <%}%>
+            <label for="">Fecha de Nacimiento</label>
+            <input type="date" name="date">
+            <% if (locals.errors && errors.date) {%>
+                <div class="error"><%= errors.date.msg %></div>
+            <%}%>
+            <label for="">Comentario</label>
+            <textarea name="comentario" cols="30" rows="10"></textarea>
+            <% if (locals.errors && errors.comentario) {%>
+                <div class="error"><%= errors.comentario.msg %></div>
+                <%}%>
+            <div>
+                <button type="submit">LISTO</button>
+                <button type="reset">BORRAR</button>
+            </div>
+        </form>
+    </div>  
+    </body>
+</html>

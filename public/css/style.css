@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    color: whitesmoke;
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    margin-top: 1.3rem;
+    text-align: center;
+    margin-bottom: 1.3rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid;
+    width: 320px;
+    height: 785px;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+
+input {
+    margin-bottom: 1.7rem;
+    border-radius: 3px;
+    border: 1px solid white;
+    padding: 0.2rem;
+}
+
+.name {
+    margin-top: 1.7rem;
+}
+
+input:hover, textarea:hover {
+    box-shadow: 1px 1px 20px whitesmoke;
+}
+
+textarea {
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-bottom:  1.7rem;
+    width: 300px;
+    height: 200px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    margin-top: 1.3rem;
+    width: 5rem;
+}
+
+button:hover {
+    color: white;
+    background-color: rgb(37, 37, 37);
+}
+
+.error {
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 15px;
+    color: #fffcfc;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+
+@media (min-width:640px) {
+    form {
+        width: 500px;
+        height: 830px;
+    }
+    textarea {
+        width: 400px;
+        height: 260px;
+    }
+    input {
+        width: 200px;
+    }
+}
+
+@media (min-width:1768px) {
+    form {
+        width: 700px;
+        height: 960px;
+    }
+    textarea {
+        width: 600px;
+        height: 340px;
+    }
+}
